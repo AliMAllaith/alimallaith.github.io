@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ali Al-Laith — Assistant Professor, University of Copenhagen</title>
+<meta name="description" content="Academic portfolio of Dr. Ali Al-Laith, Assistant Professor at the Center for Language Technology, University of Copenhagen. Research in NLP, computational linguistics, and digital humanities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --paper: #f7f9fc;
+  --paper-deep: #edf2f8;
+  --paper-light: #ffffff;
+  --ink: #14243a;
+  --ink-soft: #34465d;
+  --ink-muted: #65758b;
+  --ink-faint: #8795a8;
+  --accent: #167c80;
+  --accent-light: #25999b;
+  --gold: #c18a45;
+  --rule: #d6e0ea;
+  --rule-faint: #e7edf3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Spectral', Georgia, serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 300;
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection { background: #cce9e8; color: #14243a; }
+
+/* ====== LAYOUT ====== */
+.layout {
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 272px;
+  height: 100vh;
+  background: #14243a;
+  color: #f7f9fc;
+  border-right: 0;
+  box-shadow: 8px 0 32px rgba(20,36,58,.07);
+  padding: 2.4rem 1.8rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: #2e4058; }
+
+.monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.55rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+.monogram .dot { color: #65c3bf; font-style: italic; }
+.monogram-sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #aebdce;
+  margin-bottom: 2.5rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nav-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8296ad;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.nav-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(220,232,244,.16);
+}
+
+.nav-list { list-style: none; }
+.nav-item { margin-bottom: 0.15rem; }
+.nav-link {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0.5rem;
+  color: #d5dfeb;
+  text-decoration: none;
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 400;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 2px solid transparent;
+  margin-left: -0.5rem;
+  position: relative;
+}
+.nav-numeral {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #8296ad;
+  font-weight: 400;
+  min-width: 22px;
+  transition: color 0.35s ease;
+}
+.nav-link:hover {
+  color: #78d0ca;
+  padding-left: 1rem;
+  border-left-color: #65c3bf;
+}
+.nav-link:hover .nav-numeral { color: #78d0ca; }
+.nav-link.active {
+  color: #78d0ca;
+  padding-left: 1rem;
+  border-left-color: #65c3bf;
+  font-style: italic;
+}
+.nav-link.active .nav-numeral { color: #78d0ca; }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(220,232,244,.16);
+}
+.sidebar-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #91a3b8;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.sidebar-meta span { color: #d5dfeb; }
+
+.social-links { display: flex; gap: 0.8rem; }
+.social-links a {
+  color: #b6c5d6;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.social-links a:hover {
+  color: #78d0ca;
+  transform: translateY(-2px);
+}
+
+/* ====== MAIN CONTENT ====== */
+.main {
+  margin-left: 272px;
+  width: calc(100% - 272px);
+  min-width: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  max-width: none;
+  padding: clamp(2.2rem, 4.4vw, 5rem) clamp(1.5rem, 5vw, 6.5rem) 5rem;
+  opacity: 0;
+}
+.page.active {
+  display: block;
+  animation: pageIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+  margin-bottom: 4rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.page-marker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.8rem;
+}
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.page-title em {
+  color: var(--accent);
+  font-weight: 500;
+}
+.page-numeral-large {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  color: #b5c1cf;
+  font-weight: 300;
+}
+
+/* ====== HOME ====== */
+.home-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 4rem;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(230px, .75fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.6rem, 7vw, 7.4rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.hero-name .last {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.hero-title-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+}
+.hero-affil {
+  font-size: 1rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero-portrait {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: #dce7ed;
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 18px 18px 0 #e5eef3;
+}
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+  mix-blend-mode: normal;
+}
+.hero-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(20,36,58,.12));
+  pointer-events: none;
+}
+.portrait-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-bio {
+  font-family: 'Spectral', serif;
+  font-size: 1.18rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 52rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+.hero-bio .accent { color: var(--accent); font-style: italic; }
+
+.currently {
+  border-left: 2px solid var(--accent);
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 4rem;
+  background: #eaf4f4;
+  border-radius: 0 5px 5px 0;
+}
+.currently-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.currently-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--ink);
+  font-weight: 400;
+}
+.currently-text .rotator {
+  display: inline-block;
+  min-width: 14ch;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+}
+.stat {
+  text-align: center;
+  border-right: 1px solid var(--rule);
+  padding: 0 1.5rem;
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.stat-num em { color: var(--accent); font-style: italic; }
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.quick-link {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  box-shadow: 0 5px 18px rgba(20,36,58,.035);
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quick-link:hover {
+  background: #14243a;
+  color: #fff;
+  border-color: #14243a;
+  transform: translateY(-3px);
+}
+.quick-link:hover .ql-arrow { color: #78d0ca; transform: translateX(4px); }
+.ql-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.ql-arrow {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  transition: all 0.4s ease;
+}
+
+/* ====== EDUCATION TIMELINE ====== */
+.intro-text {
+  font-family: 'Spectral', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  max-width: 58rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
+}
+.intro-text .drop {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.9;
+  padding: 0.4rem 0.8rem 0 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.timeline { position: relative; padding-left: 0; }
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+  position: relative;
+  transition: all 0.4s ease;
+}
+.timeline-entry:last-child { border-bottom: 1px solid var(--rule); }
+.timeline-entry:hover { padding-left: 1rem; }
+.timeline-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+  padding-top: 0.2rem;
+}
+.timeline-year .institution-tag {
+  display: block;
+  color: var(--ink-faint);
+  margin-top: 0.4rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.timeline-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.timeline-content h3 em { color: var(--accent); font-style: italic; font-weight: 400; }
+.timeline-content .degree-detail {
+  font-family: 'Spectral', serif;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.timeline-content p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  max-width: 58rem;
+}
+.timeline-content .thesis-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  padding: 0.6rem 1rem;
+  background: #edf5f6;
+  border-left: 2px solid var(--accent);
+  margin: 0.8rem 0;
+  max-width: 58rem;
+}
+.timeline-honors { list-style: none; margin-top: 0.8rem; }
+.timeline-honors li {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.timeline-honors li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.6rem;
+  top: 0.45rem;
+}
+
+/* ====== RESEARCH AREAS ====== */
+.research-areas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.area-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.area-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.area-card:hover::before { transform: scaleX(1); }
+.area-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(20,36,58,.09);
+}
+.area-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.area-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.area-card h3 em { color: var(--accent); font-style: italic; font-weight: 400; }
+.area-card p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+.area-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.area-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--rule);
+  background: #f2f6f9;
+}
+
+.research-statement {
+  background: #14243a;
+  color: #f7f9fc;
+  border-radius: 5px;
+  padding: 3.5rem;
+  margin: 4rem 0;
+  position: relative;
+}
+.research-statement::before {
+  content: '“';
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8rem;
+  color: #2b777b;
+  line-height: 1;
+  font-style: italic;
+}
+.research-statement p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 50rem;
+  position: relative;
+  z-index: 1;
+}
+.research-statement .attrib {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #83cfca;
+  margin-top: 1.5rem;
+  font-style: normal;
+}
+
+/* Skills block */
+.skills-block {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+}
+.skills-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.skill-category h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.6rem;
+}
+.skill-items {
+  font-family: 'Spectral', serif;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+/* ====== PUBLICATIONS ====== */
+.pub-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.pub-filter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pub-filter:hover { color: var(--accent); border-color: var(--accent); }
+.pub-filter.active {
+  background: #14243a;
+  color: #fff;
+  border-color: #14243a;
+}
+
+.pub-year-group { margin-bottom: 3rem; }
+.pub-year-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pub-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--accent);
+  font-style: italic;
+  line-height: 1;
+}
+.pub-year-line { flex: 1; height: 1px; background: var(--rule); }
+.pub-year-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px dotted var(--rule);
+  transition: all 0.3s ease;
+}
+.pub-entry:hover {
+  background: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.pub-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--ink-faint);
+  padding-top: 0.4rem;
+}
+.pub-content h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+.pub-authors {
+  font-family: 'Spectral', serif;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+.pub-authors .me { color: var(--accent); font-weight: 500; }
+.pub-venue {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.7rem;
+}
+.pub-venue .venue-name { font-style: italic; }
+.pub-tags { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.pub-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.pub-tag:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.pub-tag i { margin-right: 0.3rem; font-size: 0.7rem; }
+
+/* ====== TEACHING ====== */
+.teaching-philosophy {
+  background: #eaf4f4;
+  padding: 3rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 5px;
+  margin-bottom: 4rem;
+}
+.teaching-philosophy h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.teaching-philosophy p {
+  font-family: 'Spectral', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.course-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.course-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.course-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.course-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.course-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.course-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+.course-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.course-meta span i { color: var(--gold); margin-right: 0.3rem; }
+.course-card p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+.course-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+  padding-top: 1rem;
+  border-top: 1px dotted var(--rule);
+}
+.course-role strong { color: var(--accent); font-weight: 500; }
+
+/* ====== PROJECTS ====== */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.7fr);
+  gap: 2.5rem;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(20,36,58,.035);
+  padding: 2rem;
+  transition: all 0.4s ease;
+}
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateX(6px);
+}
+.project-image {
+  aspect-ratio: 4/3;
+  background: var(--paper-deep);
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+  mix-blend-mode: normal;
+  transition: transform 0.6s ease;
+}
+.project-card:hover .project-image img { transform: scale(1.05); }
+.project-status {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  background: #14243a;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+}
+.project-status.active { background: var(--accent); }
+
+.project-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.project-content h3 em { color: var(--accent); font-style: italic; font-weight: 400; }
+.project-funding {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #a8793e;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.project-content p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.project-bullets {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding-left: 0;
+}
+.project-bullets li {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+.project-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+.project-role {
+  font-style: italic;
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+.project-details {
+  display: flex;
+  gap: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  padding-top: 1rem;
+  border-top: 1px dotted var(--rule);
+  flex-wrap: wrap;
+}
+.project-details div span {
+  display: block;
+  color: var(--ink-faint);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+/* ====== EXPERIENCE & SERVICE ====== */
+.service-block { margin-bottom: 4rem; }
+.service-block-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 1.8rem;
+}
+.review-card h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.review-list { list-style: none; }
+.review-list li {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+.review-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+  top: -0.1rem;
+}
+
+/* Awards */
+.awards-list { list-style: none; }
+.award-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px dotted var(--rule);
+  align-items: start;
+}
+.award-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+.award-content h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.award-content p {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* ====== CONTACT ====== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+.contact-block { margin-bottom: 2.5rem; }
+.contact-block h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.contact-block p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.contact-block a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: all 0.3s ease;
+}
+.contact-block a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.contact-block .small {
+  font-family: 'Spectral', serif;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  margin-top: 0.4rem;
+}
+
+.office-hours {
+  background: #eaf4f4;
+  border: 1px solid #d4e8e7;
+  border-left: 3px solid var(--accent);
+  border-radius: 5px;
+  padding: 2rem;
+}
+.office-hours h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.office-hours p {
+  font-family: 'Spectral', serif;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.languages-block {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.languages-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 0.95rem;
+}
+.lang-row:last-child { border: none; }
+.lang-row span:first-child { color: var(--ink); font-weight: 400; }
+.lang-row span:last-child {
+  color: var(--ink-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+/* References */
+.references-list { margin-top: 3rem; }
+.ref-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.ref-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.ref-item .ref-role {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.ref-item .ref-email {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+.ref-item .ref-email:hover { text-decoration: underline; }
+
+/* ====== MOBILE ====== */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  background: #14243a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 18px rgba(20,36,58,.18);
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    width: 280px;
+    background: #14243a;
+    box-shadow: 4px 0 30px rgba(0,0,0,0.15);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .mobile-toggle { display: flex; align-items: center; justify-content: center; }
+  .main { margin-left: 0; width: 100%; }
+  .page { padding: 5rem 1.5rem 4rem; }
+  .page-title { font-size: 2.4rem; }
+  .home-hero { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-portrait { max-width: 360px; }
+  .stats-row { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem 0; }
+  .stat { border-right: none; border-bottom: 1px solid var(--rule); padding-bottom: 1rem; }
+  .stat:last-child { border-bottom: none; }
+  .quick-links { grid-template-columns: 1fr; }
+  .research-areas { grid-template-columns: 1fr; }
+  .courses-grid { grid-template-columns: 1fr; }
+  .project-card { grid-template-columns: 1fr; gap: 1.5rem; }
+  .project-image { max-width: 420px; width: 100%; }
+  .timeline-entry { grid-template-columns: 1fr; gap: 0.5rem; }
+  .review-grid { grid-template-columns: 1fr; }
+  .award-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .research-statement { padding: 2rem; }
+  .research-statement p { font-size: 1.2rem; }
+  .research-statement::before { font-size: 5rem; left: 1rem; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.colophon {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.12em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.colophon a { color: var(--accent); text-decoration: none; }
+.colophon a:hover { color: var(--ink); }
+
+@media (min-width: 1500px) {
+  .page { padding-left: clamp(5rem, 6vw, 8rem); padding-right: clamp(5rem, 6vw, 8rem); }
+  .home-hero { grid-template-columns: minmax(0, 1.8fr) minmax(280px, .7fr); }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .sidebar { width: 245px; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .main { margin-left: 245px; width: calc(100% - 245px); }
+  .page { padding-left: 3.5vw; padding-right: 3.5vw; }
+  .home-hero { gap: 2.5rem; }
+  .project-card { grid-template-columns: minmax(180px, .7fr) minmax(0, 1.5fr); }
+}
+@media (max-width: 600px) {
+  .page { padding: 5rem 1.15rem 3rem; }
+  .home-meta { gap: .8rem; font-size: .58rem; letter-spacing: .08em; }
+  .hero-name { font-size: clamp(3.4rem, 17vw, 5rem); }
+  .hero-title-line { font-size: 1.3rem; }
+  .page-title { font-size: 2.35rem; }
+  .page-header { gap: 1rem; }
+  .page-numeral-large { font-size: 1.5rem; }
+  .stats-row { grid-template-columns: 1fr; }
+  .stat { border-right: 0; border-bottom: 1px solid var(--rule); padding: 1rem; }
+  .stat:last-child { border-bottom: 0; }
+  .quick-links, .research-areas, .courses-grid, .review-grid,
+  .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+  .timeline-entry { grid-template-columns: 1fr; gap: .5rem; }
+  .timeline-entry:hover { padding-left: 0; }
+  .research-statement { padding: 2rem 1.5rem; }
+  .project-card { padding: 1.2rem; }
+  .colophon { font-size: .58rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+<div class="layout">
+
+  <!-- ====== SIDEBAR ====== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="monogram">Ali<span class="dot"></br>
+    </span>AL-LAITH<span class="dot"></span></div>
+
+    <div class="nav-label">Index</div>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#home" class="nav-link active" data-target="home">
+          <span class="nav-numeral">I</span><span>Index</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#education" class="nav-link" data-target="education">
+          <span class="nav-numeral">II</span><span>Education</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#research" class="nav-link" data-target="research">
+          <span class="nav-numeral">III</span><span>Research</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#publications" class="nav-link" data-target="publications">
+          <span class="nav-numeral">IV</span><span>Publications</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#teaching" class="nav-link" data-target="teaching">
+          <span class="nav-numeral">V</span><span>Teaching</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#projects" class="nav-link" data-target="projects">
+          <span class="nav-numeral">VI</span><span>Projects</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#experience" class="nav-link" data-target="experience">
+          <span class="nav-numeral">VII</span><span>Experience &amp; Service</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#contact" class="nav-link" data-target="contact">
+          <span class="nav-numeral">VIII</span><span>Contact</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-meta">
+        <span>Office</span> · Center for Language Technology<br>
+        <span>University</span> · University of Copenhagen<br>
+        <span>Updated</span> · 2026
+      </div>
+      <div class="social-links">
+        <a href="mailto:alal@di.ku.dk" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://twitter.com/AliMAllaith" aria-label="X / Twitter" title="@AliMAllaith"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/ali-al-laith-69b3209b" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ====== MAIN ====== -->
+  <main class="main">
+
+    <!-- ====== I. HOME ====== -->
+    <section class="page active" id="home">
+     
+      <div class="home-hero">
+        <div>
+          <h1 class="hero-name">
+            Ali
+            <span class="last">Al-Laith</span>
+          </h1>
+          <div class="hero-title-line">Assistant Professor of Natural Language Processing</div>
+          <div class="hero-affil">
+            Center for Language Technology · Nordic Studies and Linguistics Department<br>
+            University of Copenhagen · Denmark<br>
+          </div>
+          <p class="hero-bio">
+            I work at the <span class="accent">intersection of natural language processing, machine learning, and the digital humanities</span> — developing computational methods for historical and contemporary text analysis, from Scandinavian literary corpora to Arabic social media. My current research, as part of the XHAILe project, focuses on explainable hybrid AI for computational law and legal chatbots.
+          </p>
+          <div class="currently">
+            <div class="currently-label">Currently</div>
+            <div class="currently-text">
+              working on <span class="rotator" id="rotator">explainable AI for law</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="hero-portrait">
+            <img src="data:image/jpeg;base64,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" alt="Portrait of Dr. Ali Al-Laith">
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num"><em>>30</em></div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>15+</em></div>
+          <div class="stat-label">Years of Teaching</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>4</em></div>
+          <div class="stat-label">Research Projects</div>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a href="#research" class="quick-link">
+          <span class="ql-label">Read research statement</span>
+          <span class="ql-arrow">→</span>
+        </a>
+        <a href="#publications" class="quick-link">
+          <span class="ql-label">Browse publications</span>
+          <span class="ql-arrow">→</span>
+        </a>
+        <a href="#teaching" class="quick-link">
+          <span class="ql-label">See teaching portfolio</span>
+          <span class="ql-arrow">→</span>
+        </a>
+        <a href="#contact" class="quick-link">
+          <span class="ql-label">Get in touch</span>
+          <span class="ql-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="colophon">
+        <span>A contemporary academic portfolio</span>
+        <span>© ALi. Al-Laith · Last revised 2026</span>
+      </div>
+    </section>
+
+    <!-- ====== II. EDUCATION ====== -->
+    <section class="page" id="education">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · II</div>
+          <h1 class="page-title">Education <em>&amp; Training</em></h1>
+        </div>
+        <div class="page-numeral-large">II</div>
+      </div>
+
+      <p class="intro-text">
+        <span class="drop">M</span>y academic path has spanned three countries and two language families — from undergraduate training in Saudi Arabia, through graduate work in Pakistan on Arabic NLP, to my current position in Denmark working on Scandinavian languages. The throughline has been a sustained interest in building computational tools for languages that are historically or resourcefully under-served.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-entry reveal">
+          <div class="timeline-year">
+            2016 — 2021
+            <span class="institution-tag">UET · Pakistan</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Doctor of Philosophy <em>in Computer Science</em></h3>
+            <div class="degree-detail">University of Engineering and Technology, Lahore · Pakistan</div>
+            <p>Thesis supervisor: Prof. Mohammad Shahbaz</p>
+            <div class="thesis-title">"A Hybrid Approach for Sentiment Analysis of Arabic Text"</div>
+            <p>The dissertation developed a hybrid framework combining machine learning and rule-based techniques for sentiment analysis of Arabic text — addressing the morphological richness and dialectal variation that make Arabic NLP particularly challenging.</p>
+          </div>
+        </div>
+
+        <div class="timeline-entry reveal">
+          <div class="timeline-year">
+            2013 — 2016
+            <span class="institution-tag">Punjab · Pakistan</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Master of Philosophy <em>in Computer Science</em></h3>
+            <div class="degree-detail">University of the Punjab · Lahore, Pakistan</div>
+            <div class="thesis-title">"Automatic Aggregation and Summarization of Arabic News"</div>
+            <p>The MPhil thesis explored automated methods for collecting, aggregating, and summarising Arabic-language news content from multiple sources, laying early groundwork for the text-summarisation work I would later apply to Scandinavian literary texts.</p>
+          </div>
+        </div>
+
+        <div class="timeline-entry reveal">
+          <div class="timeline-year">
+            2004 — 2008
+            <span class="institution-tag">KFU · Saudi Arabia</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Bachelor of Science <em>in Computer Science</em></h3>
+            <div class="degree-detail">King Faisal University · Saudi Arabia</div>
+            <p>Undergraduate foundation in computer science, algorithms, and software engineering.</p>
+            <ul class="timeline-honors">
+              <li>First-class Honours Certificate, 2008</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="colophon">
+        <span>Full CV available on request</span>
+        <a href="#contact">→ Contact</a>
+      </div>
+    </section>
+
+    <!-- ====== III. RESEARCH ====== -->
+    <section class="page" id="research">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · III</div>
+          <h1 class="page-title">Research <em>Interests</em></h1>
+        </div>
+        <div class="page-numeral-large">III</div>
+      </div>
+
+      <p class="intro-text">
+        <span class="drop">M</span>y research bridges natural language processing and the digital humanities. The animating question is how computational methods can be made <em>sensitive to the linguistic, historical, and cultural specificity</em> of the texts they analyse — whether historical Scandinavian novels from the 19th century or contemporary Arabic discourse on social media. Much of my work involves developing, fine-tuning, and evaluating language models for languages and time periods that off-the-shelf tools handle poorly.
+      </p>
+
+      <div class="research-areas">
+        <div class="area-card reveal">
+          <div class="area-num">Area · 01</div>
+          <h3>Natural Language <em>Processing</em></h3>
+          <p>Sentiment and emotion analysis, text classification, summarisation, and topic modelling — applied to both contemporary Arabic text and historical Scandinavian literature. A recurring theme is building tools that respect the linguistic specifics of low-resource and morphologically rich languages.</p>
+          <div class="area-tags">
+            <span class="area-tag">sentiment</span>
+            <span class="area-tag">summarisation</span>
+            <span class="area-tag">classification</span>
+            <span class="area-tag">topic modelling</span>
+          </div>
+        </div>
+
+        <div class="area-card reveal">
+          <div class="area-num">Area · 02</div>
+          <h3>Machine &amp; <em>Deep Learning</em></h3>
+          <p>Designing and fine-tuning Transformer-based large language models for historical and low-resource languages. Working with CNNs, RNNs, and modern LLM architectures for text analysis tasks, with attention to reproducibility and evaluation methodology.</p>
+          <div class="area-tags">
+            <span class="area-tag">transformers</span>
+            <span class="area-tag">LLMs</span>
+            <span class="area-tag">fine-tuning</span>
+            <span class="area-tag">pytorch</span>
+          </div>
+        </div>
+
+        <div class="area-card reveal">
+          <div class="area-num">Area · 03</div>
+          <h3>Computational <em>Social Sciences</em></h3>
+          <p>Using NLP to track literary and social change over time — detecting sentiment shifts, thematic evolution, and euphemism patterns in historical texts. The MiMe/MeMo project exemplifies this approach, tracing modernity in Scandinavian literature 1870–1900.</p>
+          <div class="area-tags">
+            <span class="area-tag">literary analysis</span>
+            <span class="area-tag">social change</span>
+            <span class="area-tag">historical NLP</span>
+            <span class="area-tag">cultural analytics</span>
+          </div>
+        </div>
+
+        <div class="area-card reveal">
+          <div class="area-num">Area · 04</div>
+          <h3>Computational <em>Linguistics</em></h3>
+          <p>Development and evaluation of pre-trained language models for historical Danish and Norwegian. Working with historical text variants, orthographic variation, and the challenges of applying contemporary models to century-old prose.</p>
+          <div class="area-tags">
+            <span class="area-tag">historical Danish</span>
+            <span class="area-tag">historical Norwegian</span>
+            <span class="area-tag">language models</span>
+            <span class="area-tag">evaluation</span>
+          </div>
+        </div>
+
+        <div class="area-card reveal">
+          <div class="area-num">Area · 05</div>
+          <h3>Digital <em>Humanities</em></h3>
+          <p>Computational approaches to humanities research questions — from noise detection in literary corpora to euphemism detection in death discourse. Building bridges between computer science methods and humanities scholarship, with an emphasis on interpretability.</p>
+          <div class="area-tags">
+            <span class="area-tag">corpus analysis</span>
+            <span class="area-tag">euphemism detection</span>
+            <span class="area-tag">noise detection</span>
+            <span class="area-tag">interpretability</span>
+          </div>
+        </div>
+
+        <div class="area-card reveal">
+          <div class="area-num">Area · 06</div>
+          <h3>Explainable AI for <em>Computational Law</em></h3>
+          <p>My current focus under the XHAILe project: building hybrid AI systems for legal applications that combine the accuracy of neural methods with the transparency required in legal reasoning. Developing accurate and explainable legal chatbots that can be trusted in professional settings.</p>
+          <div class="area-tags">
+            <span class="area-tag">legal AI</span>
+            <span class="area-tag">explainability</span>
+            <span class="area-tag">chatbots</span>
+            <span class="area-tag">hybrid systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-statement">
+        <p>Computational methods in the humanities should be measured not by the benchmarks they top, but by whether they illuminate something about a text, a period, or a language that a careful reader alone could not see.</p>
+        <div class="attrib">— Research statement, 2026</div>
+      </div>
+
+     
+
+      <div class="colophon">
+        <span>For a complete list of works →</span>
+        <a href="#publications">Section IV</a>
+      </div>
+    </section>
+
+    <!-- ====== IV. PUBLICATIONS ====== -->
+    <section class="page" id="publications">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · IV</div>
+          <h1 class="page-title"><em>Publications</em></h1>
+        </div>
+        <div class="page-numeral-large">IV</div>
+      </div>
+
+      <p class="intro-text">
+        <span class="drop">A</span> representative selection of recent publications, grouped by year. My work appears primarily at top NLP and computational linguistics venues — LREC, COLING, EMNLP, and NoDaLiDa — reflecting the dual focus on language technology infrastructure and applied digital humanities research.
+      </p>
+
+      <!-- Year filters instead of topic filters -->
+      <div class="pub-filters" id="pubYearFilters">
+        <button class="pub-filter active" data-year="all">All</button>
+        <button class="pub-filter" data-year="2026">2026</button>
+        <button class="pub-filter" data-year="2025">2025</button>
+        <button class="pub-filter" data-year="2024">2024</button>
+        <button class="pub-filter" data-year="2023">2023</button>
+        <button class="pub-filter" data-year="2022">2022</button>
+        <button class="pub-filter" data-year="2021">2021</button>
+      </div>
+
+      <div class="pub-year-group" data-year="2026">
+        <div class="pub-year-header">
+          <span class="pub-year">2026</span>
+          <span class="pub-year-line"></span>
+          <span class="pub-year-count">7 entry</span>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">01</div>
+          <div class="pub-content">
+            <h4>NovelSum: Evaluating Long-Form Summary Generation for Historical Scandinavian Novels</h4>
+            <div class="pub-authors"><span class="me">Ali Al-Laith</span>, Alexander conroy, Kirstine Nielsen Degn, Jens Bjerring-Hansen, Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC)</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2026.lrec-1.780/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2026.lrec-1.780/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.63317/22upgvjw86b9" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">02</div>
+          <div class="pub-content">
+            <h4>From Legal Text to Executable Process: LLM-Based Extraction of DCR Determinations from Danish Administrative Law</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span> and M. Agirrezabal</div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the Natural Legal Language Processing Workshop</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2026.nllp-1.50/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2026.nllp-1.50/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.18653/2026.nllp-1.50" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">03</div>
+          <div class="pub-content">
+            <h4>A Benchmark Corpus of Yemeni Proverbs for Figurative and Cultural Language Modeling</h4>
+            <div class="pub-authors">Nasser Thmer, <span class="me">Ali Al-Laith</span> Muhammad Shoaib and Hassan Alhuzali</div>
+            <div class="pub-venue"><span class="venue-name">Scientific Data</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://www.nature.com/articles/s41597-026-07234-y" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://www.nature.com/articles/s41597-026-07234-y" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.1038/s41597-026-07234-y" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">04</div>
+          <div class="pub-content">
+            <h4>Speaking on Their Behalf: Detecting Indirect Speech in Historical Danish and Norwegian Texts</h4>
+            <div class="pub-authors"><span class="me">Ali Al-Laith</span>, Alexander Conroy, Kirstine Degn, Jens Bjerring-Hansen and Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the 10th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2026.latechclfl-1.15/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2026.latechclfl-1.15/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.18653/v1/2026.latechclfl-1.15" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">05</div>
+          <div class="pub-content">
+            <h4>Prompting and Fine-Tuning Approaches for Detection and Generation of Spanish Humor</h4>
+            <div class="pub-authors">Osamah H. Alaini, Nasser Thmer and <span class="me">Ali Al-Laith</span></div>
+            <div class="pub-venue"><span class="venue-name">En Proceedings of the Iberian Languages Evaluation Forum (Iber-LEF 2026), co-located with the 42nd Conference of the Spanish Society for Natural Language Processing</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://ceur-ws.org/Vol-4273/HAHA2026_paper6.pdf" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://ceur-ws.org/Vol-4273/HAHA2026_paper6.pdf" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://ceur-ws.org/Vol-4273/HAHA2026_paper6.pdf" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">06</div>
+          <div class="pub-content">
+            <h4>Prompting and Fine-Tuning Approaches for Detection and Generation of Spanish Humor</h4>
+            <div class="pub-authors">Osamah H. Alaini, Nasser Thmer and <span class="me">Ali Al-Laith</span></div>
+            <div class="pub-venue"><span class="venue-name">En Proceedings of the Iberian Languages Evaluation Forum (Iber-LEF 2026), co-located with the 42nd Conference of the Spanish Society for Natural Language Processing</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://ceur-ws.org/Vol-4273/HAHA2026_paper6.pdf" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://ceur-ws.org/Vol-4273/HAHA2026_paper6.pdf" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://ceur-ws.org/Vol-4273/HAHA2026_paper6.pdf" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">07</div>
+          <div class="pub-content">
+            <h4>Beyond Literal Meaning: How LLMs Interpret Yemeni Proverbs</h4>
+            <div class="pub-authors">Nasser Thmer, <span class="me">Ali Al-Laith</span> and Muhammad Shoaib</div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026)</span>, 2026</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2026.lrec-1.83/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2026.lrec-1.83/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.63317/4hxnxxxq5iu2" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="pub-year-group" data-year="2025">
+        <div class="pub-year-header">
+          <span class="pub-year">2025</span>
+          <span class="pub-year-line"></span>
+          <span class="pub-year-count">10 entry</span>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">01</div>
+          <div class="pub-content">
+            <h4>Dying or Departing? Euphemism Detection for Death Discourse in Historical Texts</h4>
+            <div class="pub-authors"><span class="me">Ali Al-Laith</span>, Alexander Conroy, Jens Bjerring-Hansen, Bolette Sandford Pedersen, Carsten Levisen and Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">The 31st International Conference on Computational Linguistics (COLING)</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2025.coling-main.90/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2025.coling-main.90/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <div class="pub-entry">
+          <div class="pub-num">02</div>
+          <div class="pub-content">
+            <h4>Evaluating llm-generated explanations of metaphors–a culture-sensitive study of danish</h4>
+            <div class="pub-authors">Bolette Sandford Pedersen, Nathalie Sørensen, Sanni Nimb, Dorte Haltrup Hansen, Sussi Olsen and <span class="me">Ali Al-Laith</span></div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the Joint 25th Nordic Conference on Computational Linguistics and 11th Baltic Conference on Human Language Technologies (NoDaLiDa/Baltic-HLT 2025)</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2025.nodalida-1.51/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2025.nodalida-1.51/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">03</div>
+          <div class="pub-content">
+            <h4>Annotating and classifying direct speech in historical danish and norwegian literary texts</h4>
+            <div class="pub-authors"><span class="me">Ali Al-Laith</span>, Alexander Conroy, Kirstine Nielsen Degn, Jens Bjerring-Hansen and Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the Joint 25th Nordic Conference on Computational Linguistics and 11th Baltic Conference on Human Language Technologies (NoDaLiDa/Baltic-HLT 2025)</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2025.nodalida-1.1/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2025.nodalida-1.1/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">04</div>
+          <div class="pub-content">
+            <h4>Unhappy Texts? A Gendered and Computational Rereading of the Modern Breakthrough</h4>
+            <div class="pub-authors">Kirstine Nielsen Degn, Jens Bjerring-Hansen, <span class="me">Ali Al-Laith</span> and Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">Scandinavian Studies</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://sca.uwpress.org/content/97/1/1" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://sca.uwpress.org/content/97/1/1" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.3368/sca.97.1.1" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">05</div>
+          <div class="pub-content">
+            <h4>Automated Generation of Arabic Verb Conjugations with Multilingual Urdu Translation: An NLP Approach</h4>
+            <div class="pub-authors">Haq Nawaz, Manal Elobaid, <span class="me">Ali Al-Laith</span> and Saif Ullah</div>
+            <div class="pub-venue"><span class="venue-name">The 1st Workshop on NLP for Languages Using Arabic Script</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2025.abjadnlp-1.14/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2025.abjadnlp-1.14/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">06</div>
+          <div class="pub-content">
+            <h4>Evaluating Calibration of Arabic Pre-trained Language Models on Dialectal Text</h4>
+            <div class="pub-authors"><span class="me">Ali Al-Laith</span> and Rachida Kebdani</div>
+            <div class="pub-venue"><span class="venue-name">The 4th Workshop on Arabic Corpus Linguistics (WACL-4)</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2025.wacl-1.8/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2025.wacl-1.8/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="pub-entry">
+          <div class="pub-num">07</div>
+          <div class="pub-content">
+            <h4>Exploring the Effectiveness of Multilingual and Generative Large Language Models for Question Answering in Financial Texts</h4>
+            <div class="pub-authors"><span class="me">Ali Al-Laith</span></div>
+            <div class="pub-venue"><span class="venue-name">Joint Workshop of the 9th Financial Technology and Natural Language Processing (FinNLP), the 6th Financial Narrative Processing (FNP), and the 1st Workshop on Large Language Models for Finance and Legal (LLMFinLegal)</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2025.finnlp-1.23/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2025.finnlp-1.23/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">08</div>
+          <div class="pub-content">
+            <h4>Multi-task learning by using contextualized word representations for syntactic parsing of a morphologically rich language</h4>
+            <div class="pub-authors">Toqeer Ehsan, Miriam Butt, Sarmad Hussain, Hassan Alhuzali and <span class="me">Ali Al-Laith</span></div>
+            <div class="pub-venue"><span class="venue-name">Plos one</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0332580" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0332580" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.1371/journal.pone.0332580" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">09</div>
+          <div class="pub-content">
+            <h4>Deep Learning-Based Draw-a-Person Intelligence Quotient Screening</h4>
+            <div class="pub-authors">Shafaat Hussain, Toqeer Ehsan, Hassan Alhuzali and <span class="me">Ali Al-Laith</span></div>
+            <div class="pub-venue"><span class="venue-name">Big Data and Cognitive Computing</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://www.mdpi.com/2504-2289/9/7/164" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://www.mdpi.com/2504-2289/9/7/164" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.3390/bdcc9070164" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="pub-entry">
+          <div class="pub-num">10</div>
+          <div class="pub-content">
+            <h4>EFNet: estimation of left ventricular ejection fraction from cardiac ultrasound videos using deep learning</h4>
+            <div class="pub-authors">Waqas Ali, Wesam Alsabban, Muhammad Shahbaz, <span class="me">Ali Al-Laith</span> and Bassam Almogadwy</div>
+            <div class="pub-venue"><span class="venue-name">PeerJ Computer Science</span>, 2025</div>
+            <div class="pub-tags">
+              <a href="https://peerj.com/articles/cs-2506/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://peerj.com/articles/cs-2506/" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+              <a href="https://doi.org/10.7717/peerj-cs.2506" class="pub-tag"><i class="fa-solid fa-link"></i>DOI</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="pub-year-group" data-year="2024">
+        <div class="pub-year-header">
+          <span class="pub-year">2024</span>
+          <span class="pub-year-line"></span>
+          <span class="pub-year-count">3 entries</span>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">01</div>
+          <div class="pub-content">
+            <h4>Development and Evaluation of Pre-Trained Language Models for Historical Danish and Norwegian Literary Texts</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span>, Alexander Conroy, Jens Bjerring-Hansen, Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING)</span>, 2024</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2024.lrec-main.431/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2024.lrec-main.431/" class="pub-tag"><i class="fa-solid fa-code"></i>Models</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">02</div>
+          <div class="pub-content">
+            <h4>Noise, Novels, Numbers: A Framework for Detecting and Categorizing Noise in Danish and Norwegian Literature</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span>, Daniel Hershcovich, Jens Bjerring-Hansen, Jakob Ingemann Parby, Alexander Conroy, Timothy R Tangherlini</div>
+            <div class="pub-venue"><span class="venue-name">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP)</span>, 2024</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2024.emnlp-main.196/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2024.emnlp-main.196/" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.18653/v1/2024.emnlp-main.196" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">03</div>
+          <div class="pub-content">
+            <h4>Literary Time Travel: Distinguishing Past and Contemporary Worlds in Danish and Norwegian Fiction</h4>
+            <div class="pub-authors">Jens Bjerring-Hansen, <span class="me">Al-Laith, Ali</span>, Daniel Hershcovich, Alexander Conroy and Sebastian Ørtoft Rasmussen</div>
+            <div class="pub-venue"><span class="venue-name">Computational Humanities Research Conference (CHR)</span>, 2024</div>
+            <div class="pub-tags">
+              <a href="https://ceur-ws.org/Vol-3834/paper19.pdf" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://ceur-ws.org/Vol-3834/paper19.pdf" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="pub-year-group" data-year="2023">
+        <div class="pub-year-header">
+          <span class="pub-year">2023</span>
+          <span class="pub-year-line"></span>
+          <span class="pub-year-count">2 entry</span>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">01</div>
+          <div class="pub-content">
+            <h4>Sentiment Classification of Historical Danish and Norwegian Literary Texts</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span>, Kirstine Nielsen Degn, Alexander Conroy, Bolette S Pedersen, Jens Bjerring-Hansen and Daniel Hershcovich</div>
+            <div class="pub-venue"><span class="venue-name">The 24rd Nordic Conference on Computational Linguistics (NoDaLiDa)</span>, 2023</div>
+            <div class="pub-tags">
+              <a href="https://aclanthology.org/2023.nodalida-1.34/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://aclanthology.org/2023.nodalida-1.34/" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="#" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">02</div>
+          <div class="pub-content">
+            <h4>Privacy lost in online education: Analysis of web tracking evolution</h4>
+            <div class="pub-authors">Zhan Su, Rasmus Helles, <span class="me">Al-Laith, Ali</span>, Antti Veilahti, Akrati Saxena and Jakob Grue Simonsen</div>
+            <div class="pub-venue"><span class="venue-name">The 24rd Nordic Conference on Computational Linguistics (NoDaLiDa)</span>, 2023</div>
+            <div class="pub-tags">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-46664-9_30" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-46664-9_30" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.1007/978-3-031-46664-9_30" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+	</div>        
+
+      <div class="pub-year-group" data-year="2022">
+        <div class="pub-year-header">
+          <span class="pub-year">2022</span>
+          <span class="pub-year-line"></span>
+          <span class="pub-year-count">2 Papers</span>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">01</div>
+          <div class="pub-content">
+            <h4>Metaverse framework: A case study on E-learning environment (ELEM)</h4>
+            <div class="pub-authors">Neama A Dahan, Muna Al-Razgan, <span class="me">Al-Laith, Ali</span>, Muaadh A Alsoufi, Mahfoudh S Al-Asaly and Taha Alfakih</div>
+            <div class="pub-venue"><span class="venue-name">Electronics (MDPI)</span>, 2022</div>
+            <div class="pub-tags">
+              <a href="https://www.mdpi.com/2079-9292/11/10/1616" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://www.mdpi.com/2079-9292/11/10/1616" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.3390/electronics11101616" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">02</div>
+          <div class="pub-content">
+            <h4>Identification of soil type in Pakistan using remote sensing and machine learning</h4>
+            <div class="pub-authors">Yasin Ul Haq, Muhammad Shahbaz, HM Shahzad Asif, <span class="me">Al-Laith, Ali</span>, Wesam Alsabban and Muhammad Haris Aziz</div>
+            <div class="pub-venue"><span class="venue-name"> PeerJ Computer Science</span>, 2022</div>
+            <div class="pub-tags">
+              <a href="https://peerj.com/articles/cs-1109/" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://peerj.com/articles/cs-1109/" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.7717/peerj-cs.1109" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+       
+	</div>  
+
+      <div class="pub-year-group" data-year="2021">
+        <div class="pub-year-header">
+          <span class="pub-year">2021</span>
+          <span class="pub-year-line"></span>
+          <span class="pub-year-count">2 Papers</span>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-num">01</div>
+          <div class="pub-content">
+            <h4>Tracking Sentiment Towards News Entities from Arabic News on Social Media</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span> and Muhammad Shahbaz</div>
+            <div class="pub-venue"><span class="venue-name">Future Generation Computer Systems</span>, 2021</div>
+            <div class="pub-tags">
+              <a href="https://www.sciencedirect.com/science/article/pii/S0167739X2100025X" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0167739X2100025X" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.1016/j.future.2021.01.015" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">02</div>
+          <div class="pub-content">
+            <h4>Monitoring People’s Emotions and Symptoms from Arabic Tweets during the COVID-19 Pandemic</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span> and Mamdouh Alenezi</div>
+            <div class="pub-venue"><span class="venue-name"> Information</span>, 2021</div>
+            <div class="pub-tags">
+              <a href="https://www.mdpi.com/2078-2489/12/2/86" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://www.mdpi.com/2078-2489/12/2/86" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.3390/info12020086" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+       <div class="pub-entry">
+          <div class="pub-num">03</div>
+          <div class="pub-content">
+            <h4>Fake News Detection in Arabic Tweets during the COVID-19 Pandemic</h4>
+            <div class="pub-authors">Ahmed Redha Mahlous and <span class="me">Al-Laith, Ali</span></div>
+            <div class="pub-venue"><span class="venue-name">International Journal of Advanced Computer Science and Applications</span>, 2021</div>
+            <div class="pub-tags">
+              <a href="https://thesai.org/Publications/ViewPaper?Volume=12&Issue=6&Code=IJACSA&SerialNo=91" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://thesai.org/Publications/ViewPaper?Volume=12&Issue=6&Code=IJACSA&SerialNo=91" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.14569/IJACSA.2021.0120691" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pub-entry">
+          <div class="pub-num">04</div>
+          <div class="pub-content">
+            <h4>AraSenCorpus: A Semi-supervised Approach for Sentiment Annotation of a Large Arabic Text Corpus</h4>
+            <div class="pub-authors"><span class="me">Al-Laith, Ali</span> Muhammad Shahbaz, Hind F Alaskar and Asim Rehmat</div>
+            <div class="pub-venue"><span class="venue-name"> Applied Sciences</span>, 2021</div>
+            <div class="pub-tags">
+              <a href="https://www.mdpi.com/2076-3417/11/5/2434" class="pub-tag"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+              <a href="https://www.mdpi.com/2076-3417/11/5/2434" class="pub-tag"><i class="fa-solid fa-code"></i>Code</a>
+              <a href="https://doi.org/10.3390/app11052434" class="pub-tag"><i class="fa-solid fa-quote-right"></i>BibTeX</a>
+            </div>
+          </div>
+        </div>
+        
+	</div> 	
+      <div class="colophon">
+        <span>5 publications shown</span>
+        <a href="#">→ Google Scholar profile</a>
+      </div>
+    </section>
+
+    <!-- ====== V. TEACHING ====== -->
+    <section class="page" id="teaching">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · V</div>
+          <h1 class="page-title">Teaching <em>&amp; Pedagogy</em></h1>
+        </div>
+        <div class="page-numeral-large">V</div>
+      </div>
+
+      <div class="teaching-philosophy reveal">
+        <h3>On teaching</h3>
+        <p>My teaching spans computer science, digital humanities, and language technology — from undergraduate programming to PhD-level courses on the treatment of language data. I believe students learn best when they engage with real, messy data and build systems that operate on texts they find intellectually compelling. My courses at Copenhagen connect technical NLP methods to humanities research questions, drawing students from both computer science and the humanities.</p>
+      </div>
+
+      <div class="course-section-title">Current Courses · University of Copenhagen</div>
+      <div class="courses-grid">
+        <div class="course-card reveal">
+          <div class="course-code">NORDIS · PhD</div>
+          <h4>Introduction to Digital Humanities and the Treatment of <em>Language Data</em></h4>
+          <div class="course-meta">
+            <span><i class="fa-solid fa-calendar"></i>Spring 2024 &amp; 2026</span>
+            <span><i class="fa-solid fa-user-group"></i>PhD Level</span>
+          </div>
+          <p>A doctoral-level course introducing digital humanities methods and the computational treatment of language data. Covers corpus building, text processing, and NLP methods applicable to humanities research.</p>
+          <div class="course-role"><strong>Lecturer</strong> · Nordic Studies and Linguistics Department</div>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-code">CLT · BA</div>
+          <h4>Language and <em>Language Processing</em></h4>
+          <div class="course-meta">
+            <span><i class="fa-solid fa-calendar"></i>Spring 2025 &amp; 2026</span>
+            <span><i class="fa-solid fa-user-group"></i>Bachelor Level</span>
+          </div>
+          <p>An introductory bachelor's course covering the fundamentals of human language structure and computational approaches to language processing. Bridges linguistic theory with practical NLP techniques.</p>
+          <div class="course-role"><strong>Lecturer</strong> · Centre for Language Technology, Nordic Studies and Linguistics</div>
+        </div>
+      </div>
+
+      <div class="course-section-title">Previous Teaching Experience</div>
+      <div class="courses-grid">
+        <div class="course-card reveal">
+          <div class="course-code">DIKU · MSc</div>
+          <h4>Introduction to <em>Data Science</em></h4>
+          <div class="course-meta">
+            <span><i class="fa-solid fa-calendar"></i>Spring 2023</span>
+            <span><i class="fa-solid fa-user-group"></i>M.Sc. Level</span>
+          </div>
+          <p>Guest lecturer for the MSc-level Introduction to Data Science course at the Computer Science Department, covering NLP and text analytics components.</p>
+          <div class="course-role"><strong>Guest Lecturer</strong> · Computer Science Department, University of Copenhagen</div>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-code">NCBA&E · BA</div>
+          <h4>Data Structures <em>&amp; Human-Computer Interaction</em></h4>
+          <div class="course-meta">
+            <span><i class="fa-solid fa-calendar"></i>Spring 2018</span>
+            <span><i class="fa-solid fa-user-group"></i>Bachelor Level</span>
+          </div>
+          <p>Visiting faculty teaching two undergraduate courses: Data Structures (covering fundamental data organisation and algorithms) and Human-Computer Interaction (covering UI/UX principles and interaction design).</p>
+          <div class="course-role"><strong>Visiting Faculty</strong> · NCBA&amp;E University, Lahore, Pakistan</div>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-code">Amran · BA</div>
+          <h4>Advanced Programming, Intro to Computing <em>&amp; Visual Programming</em></h4>
+          <div class="course-meta">
+            <span><i class="fa-solid fa-calendar"></i>2011 – 2013</span>
+            <span><i class="fa-solid fa-user-group"></i>Bachelor Level</span>
+          </div>
+          <p>Lecturer across three undergraduate courses: Advanced Programming, Introduction to Computing, and Visual Programming. Developed course materials and supervised student projects.</p>
+          <div class="course-role"><strong>Lecturer</strong> · Amran Community College, Yemen</div>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-code">Sana'a · BA</div>
+          <h4>Geographic Information Systems <em>&amp; Web Programming</em></h4>
+          <div class="course-meta">
+            <span><i class="fa-solid fa-calendar"></i>2009 – 2011</span>
+            <span><i class="fa-solid fa-user-group"></i>Bachelor Level</span>
+          </div>
+          <p>Teaching Assistant for two undergraduate courses in the Computer Science Department: Geographic Information Systems and Web Programming. Conducted lab sessions, graded assignments, and provided student support.</p>
+          <div class="course-role"><strong>Teaching Assistant</strong> · Computer Science Department, Sana'a University, Yemen</div>
+        </div>
+      </div>
+
+      <div class="colophon">
+        <span>Teaching dossier available on request</span>
+        <a href="#contact">→ Contact</a>
+      </div>
+    </section>
+
+    <!-- ====== VI. PROJECTS ====== -->
+    <section class="page" id="projects">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · VI</div>
+          <h1 class="page-title">Research <em>Projects</em></h1>
+        </div>
+        <div class="page-numeral-large">VI</div>
+      </div>
+
+      <p class="intro-text">
+        <span class="drop">A</span> selection of funded research projects I have contributed to, spanning computational law, historical Scandinavian NLP, privacy analysis, and Arabic/Urdu language engineering. Each project listed below represents a distinct phase of my research trajectory and includes my specific role and contributions.
+      </p>
+
+      <div class="projects-list">
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://picsum.photos/seed/project-xhaile/600/450.jpg" alt="">
+            <span class="project-status active">Active</span>
+          </div>
+          <div class="project-content">
+            <h3>XHAILe <em>: Explainable Hybrid AI for Computational Law</em></h3>
+            <div class="project-funding">University of Copenhagen · 2025 – present</div>
+            <p>Building efficient and accurate hybrid AI technologies for computational law and natural language interaction. The project aims to develop legal chatbots that combine the accuracy of modern neural methods with the transparency and explainability required in legal practice.</p>
+            <ul class="project-bullets">
+              <li>Designing hybrid AI architectures that integrate symbolic and neural reasoning</li>
+              <li>Building accurate legal chatbots with explainable decision pathways</li>
+              <li>Developing evaluation frameworks for legal AI systems</li>
+            </ul>
+            <div class="project-role">Role: Assistant Professor · Center for Language Technology, Nordic Studies</div>
+            <div class="project-details">
+              <div><span>Institution</span>University of Copenhagen</div>
+              <div><span>Period</span>2025 – present</div>
+              <div><span>Focus</span>Computational Law</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://picsum.photos/seed/project-mimememo/600/450.jpg" alt="">
+            <span class="project-status active">Completed</span>
+          </div>
+          <div class="project-content">
+            <h3>MiMe/MeMo <em>: Mining the Meaning and Measuring Modernity</em></h3>
+            <div class="project-funding">University of Copenhagen · 2022 – 2025</div>
+            <p>A project on literary and social change in Scandinavia 1870–1900, applying computational methods to trace modernity through the literary texts of the period.</p>
+            <ul class="project-bullets">
+              <li>Developed NLP models for sentiment &amp; emotion analysis, topic modelling, and text classification &amp; summarisation for Scandinavian literary texts</li>
+              <li>Designed and fine-tuned Transformer-based LLMs for historical Danish and Norwegian text analysis</li>
+              <li>Produced NovelSum benchmark and historical language model evaluations</li>
+            </ul>
+            <div class="project-role">Role: Postdoctoral Researcher · Center for Language Technology, Nordic Studies &amp; Linguistics and NLP Section, Computer Science Department</div>
+            <div class="project-details">
+              <div><span>Institution</span>University of Copenhagen</div>
+              <div><span>Period</span>2022 – 2025</div>
+              <div><span>Focus</span>Historical Scandinavian NLP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://picsum.photos/seed/project-privacylost/600/450.jpg" alt="">
+            <span class="project-status">Completed</span>
+          </div>
+          <div class="project-content">
+            <h3>Privacy Lost <em>: Web Tracking in Online Education and Media</em></h3>
+            <div class="project-funding">University of Copenhagen · 2021 – 2022</div>
+            <p>A postdoctoral project analysing the evolution of web tracking in online education platforms and digital media, applying machine learning to detect and evaluate privacy vulnerabilities.</p>
+            <ul class="project-bullets">
+              <li>Analysed web tracking evolution in online education and media platforms</li>
+              <li>Applied machine learning techniques to evaluate and detect privacy vulnerabilities in digital platforms</li>
+            </ul>
+            <div class="project-role">Role: Postdoctoral Researcher · Computer Science Department, University of Copenhagen</div>
+            <div class="project-details">
+              <div><span>Institution</span>University of Copenhagen</div>
+              <div><span>Period</span>2021 – 2022</div>
+              <div><span>Focus</span>Privacy &amp; Web Tracking</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="https://picsum.photos/seed/project-cle-uet/600/450.jpg" alt="">
+            <span class="project-status">Completed</span>
+          </div>
+          <div class="project-content">
+            <h3>Center for Language Engineering <em>: Multiple NLP Projects</em></h3>
+            <div class="project-funding">University of Engineering and Technology, Pakistan · 2018 – 2021</div>
+            <p>A portfolio of NLP projects for Arabic and Urdu languages, conducted as Research Associate at the Center for Language Engineering.</p>
+            <ul class="project-bullets">
+              <li>Sentiment Analysis &amp; emotion trackers for Arabic news on social media</li>
+              <li>Fake News Detection from Arabic social media content</li>
+              <li>Urdu Plagiarism Detection using deep learning</li>
+              <li>Urdu Romanization &amp; Transliteration models</li>
+              <li>Research Indexing System for local journals in Pakistani languages</li>
+            </ul>
+            <div class="project-role">Role: Research Associate · Center for Language Engineering, UET Pakistan</div>
+            <div class="project-details">
+              <div><span>Institution</span>UET Lahore</div>
+              <div><span>Period</span>2018 – 2021</div>
+              <div><span>Focus</span>Arabic &amp; Urdu NLP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="colophon">
+        <span>Project artefacts available where funding terms permit</span>
+        <a href="#contact">→ Collaboration enquiries</a>
+      </div>
+    </section>
+
+    <!-- ====== VII. EXPERIENCE & SERVICE ====== -->
+    <section class="page" id="experience">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · VII</div>
+          <h1 class="page-title">Experience <em>&amp; Service</em></h1>
+        </div>
+        <div class="page-numeral-large">VII</div>
+      </div>
+
+      <p class="intro-text">
+        <span class="drop">A</span> full timeline of academic appointments, supervision activity, peer-review service, and awards. My career has moved through institutions in Pakistan, Yemen, Saudi Arabia, and Denmark, with a consistent focus on building language technology for under-served languages and texts.
+      </p>
+
+      <div class="service-block">
+        <h3 class="service-block-title">Academic Appointments</h3>
+        <div class="timeline">
+          <div class="timeline-entry reveal">
+            <div class="timeline-year">
+              2025 — now
+              <span class="institution-tag">CPH · Denmark</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Assistant Professor <em>of Computer Science</em></h3>
+              <div class="degree-detail">Center for Language Technology, Nordic Studies · University of Copenhagen</div>
+              <p>Project: <strong>XHAILe</strong> — Explainable Hybrid AI for Computational Law and Accurate Legal Chatbots. Building efficient and accurate hybrid AI technologies for computational law and natural language interaction.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry reveal">
+            <div class="timeline-year">
+              2022 — 2025
+              <span class="institution-tag">CPH · Denmark</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Postdoctoral Researcher <em>in NLP</em></h3>
+              <div class="degree-detail">Center for Language Technology, Nordic Studies &amp; Linguistics and NLP Section, Computer Science Department · University of Copenhagen</div>
+              <p>Project: <strong>MiMe/MeMo</strong> — Mining the Meaning and Measuring Modernity: Literary and Social Change in Scandinavia 1870–1900.</p>
+              <ul class="timeline-honors">
+                <li>Developed NLP models for sentiment &amp; emotion analysis, topic modelling, and text classification &amp; summarisation for Scandinavian literary texts</li>
+                <li>Designed and fine-tuned Transformer-based LLMs for historical Danish and Norwegian text analysis</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-entry reveal">
+            <div class="timeline-year">
+              2021 — 2022
+              <span class="institution-tag">CPH · Denmark</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Postdoctoral Researcher <em>in Privacy &amp; ML</em></h3>
+              <div class="degree-detail">Computer Science Department · University of Copenhagen</div>
+              <p>Project: <strong>Privacy Lost</strong> — analysis of web tracking evolution in online education and media.</p>
+              <ul class="timeline-honors">
+                <li>Analysed web tracking evolution in online education and media platforms</li>
+                <li>Applied machine learning techniques to evaluate and detect privacy vulnerabilities in digital platforms</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-entry reveal">
+            <div class="timeline-year">
+              2018 — 2021
+              <span class="institution-tag">UET · Pakistan</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Research Associate <em>in Language Engineering</em></h3>
+              <div class="degree-detail">Center for Language Engineering · University of Engineering and Technology, Pakistan</div>
+              <p>Projects: Sentiment Analysis, Fake News Detection, Urdu Plagiarism Detection, Research Indexing System, Urdu Romanization &amp; Transliteration.</p>
+              <ul class="timeline-honors">
+                <li>Developed sentiment &amp; emotion trackers and misinformation detection from Arabic news on social media</li>
+                <li>Developed Urdu plagiarism detection and Urdu–English transliteration models using deep learning</li>
+                <li>Developed a research indexing system for local journals published in Pakistani languages</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <h3 class="service-block-title">Supervision</h3>
+        <div class="timeline">
+          <div class="timeline-entry reveal">
+            <div class="timeline-year">
+              2023
+              <span class="institution-tag">CPH · Denmark</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Co-Supervision of <em>Two Master's Theses</em></h3>
+              <div class="degree-detail">Computer Science Department · University of Copenhagen</div>
+              <p>Co-supervised two master's thesis projects in the Computer Science Department, working with students on NLP-related research topics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <h3 class="service-block-title">Peer Review Service</h3>
+        <div class="review-grid">
+          <div class="review-card reveal">
+            <h4>Journals</h4>
+            <ul class="review-list">
+              <li>Language Resources and Evaluation</li>
+              <li>Knowledge and Information Systems</li>
+              <li>Journal of Big Data</li>
+              <li>IEEE Access</li>
+              <li>Social Network Analysis and Mining</li>
+              <li>Artificial Intelligence Review</li>
+              <li>Applied Sciences</li>
+            </ul>
+          </div>
+          <div class="review-card reveal">
+            <h4>Conferences</h4>
+            <ul class="review-list">
+              <li>EMNLP — Conference on Empirical Methods in Natural Language Processing</li>
+              <li>ArabicNLP — Workshop on Arabic Natural Language Processing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <h3 class="service-block-title">Awards &amp; Grants</h3>
+        <div class="awards-list">
+          <div class="award-item reveal">
+            <div class="award-year">2020</div>
+            <div class="award-content">
+              <h4>COVID-19 Research Funds</h4>
+              <p>$10,000 USD · Awarded by Prince Sultan University, Saudi Arabia, for COVID-19 related research.</p>
+            </div>
+          </div>
+          <div class="award-item reveal">
+            <div class="award-year">2008</div>
+            <div class="award-content">
+              <h4>First-Class Honours Certificate</h4>
+              <p>Awarded by King Faisal University, Saudi Arabia, upon graduation with first-class honours in Computer Science.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="colophon">
+        <span>Full academic record available on request</span>
+        <a href="#contact">→ Contact</a>
+      </div>
+    </section>
+
+    <!-- ====== VIII. CONTACT ====== -->
+    <section class="page" id="contact">
+      <div class="page-header">
+        <div>
+          <div class="page-marker">Section · VIII</div>
+          <h1 class="page-title">Contact <em>&amp; References</em></h1>
+        </div>
+        <div class="page-numeral-large">VIII</div>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-block reveal">
+            <h3>Email</h3>
+            <p><a href="mailto:alal@di.ku.dk">alal@di.ku.dk</a></p>
+            <div class="small">For research enquiries, collaboration, and student supervision.</div>
+          </div>
+
+          <div class="contact-block reveal">
+            <h3>Telephone</h3>
+            <p><a href="tel:+4531894464">+45 31 89 44 64</a></p>
+            <div class="small">Available during office hours, Danish time.</div>
+          </div>
+
+          <div class="contact-block reveal">
+            <h3>Postal Address</h3>
+            <p>Dr. Ali Al-Laith</p>
+            <p>Center for Language Technology</p>
+            <p>Nordic Studies &amp; Linguistics Department</p>
+            <p>University of Copenhagen</p>
+            <p>Copenhagen · Denmark</p>
+            <div class="small">For all formal correspondence and reference letters.</div>
+          </div>
+
+          <div class="contact-block reveal">
+            <h3>Social &amp; Academic Profiles</h3>
+            <p style="font-size: 0.95rem; font-family: 'Spectral', serif; line-height: 1.9;">
+              <a href="https://twitter.com/AliMAllaith">X / Twitter</a> · @AliMAllaith<br>
+              <a href="https://www.linkedin.com/in/ali-al-laith-69b3209b">LinkedIn</a> · ali-al-laith<br>
+              <a href="mailto:alal@di.ku.dk">Email</a> · alal@di.ku.dk
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="office-hours reveal">
+            <h3>Office Hours</h3>
+            <p>By appointment during teaching terms.</p>
+            <p style="margin-top: 0.8rem; font-style: italic; font-size: 0.9rem;">Please email to schedule a meeting. For prospective students, please include your CV and a brief description of your research interests.</p>
+          </div>
+
+          <div class="languages-block reveal">
+            <h3>Languages</h3>
+            <div class="lang-row"><span>Arabic</span><span>Mother tongue</span></div>
+            <div class="lang-row"><span>English</span><span>Fluent</span></div>
+            <div class="lang-row"><span>Danish</span><span>PD3 Level</span></div>
+            <div class="lang-row"><span>Urdu</span><span>Intermediate</span></div>
+            <div class="lang-row"><span>French</span><span>Intermediate</span></div>
+          </div>
+        </div>
+      </div>
+
+      
+
+     
+
+      <div class="colophon">
+        <span>Contemporary academic portfolio · 2026</span>
+        <span>© Ali Al-Laith · University of Copenhagen</span>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+// ====== Page routing ======
+const pages = document.querySelectorAll('.page');
+const navLinks = document.querySelectorAll('.nav-link');
+const sidebar = document.getElementById('sidebar');
+const mobileToggle = document.getElementById('mobileToggle');
+
+function showPage(target) {
+  pages.forEach(p => p.classList.remove('active'));
+  const targetPage = document.getElementById(target);
+  if (!targetPage) return;
+  targetPage.classList.add('active');
+
+  navLinks.forEach(n => n.classList.remove('active'));
+  const activeLink = document.querySelector(`.nav-link[data-target="${target}"]`);
+  if (activeLink) activeLink.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  setTimeout(() => observeReveals(targetPage), 50);
+  sidebar.classList.remove('open');
+}
+
+function handleHash() {
+  const hash = window.location.hash.substring(1) || 'home';
+  showPage(hash);
+}
+
+window.addEventListener('hashchange', handleHash);
+window.addEventListener('load', () => {
+  if (!window.location.hash) history.replaceState(null, '', '#home');
+  handleHash();
+});
+
+// ====== Mobile menu ======
+mobileToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  sidebar.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 900 && sidebar.classList.contains('open')) {
+    if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  }
+});
+
+// ====== Scroll reveal ======
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+function observeReveals(scope) {
+  const reveals = (scope || document).querySelectorAll('.reveal:not(.visible)');
+  reveals.forEach(el => revealObserver.observe(el));
+}
+observeReveals(document);
+
+// ====== Publication year filter (replaces topic filter) ======
+const pubFilters = document.querySelectorAll('.pub-filter');
+const pubYearGroups = document.querySelectorAll('.pub-year-group');
+
+pubFilters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    pubFilters.forEach(f => f.classList.remove('active'));
+    filter.classList.add('active');
+
+    const year = filter.dataset.year;
+    pubYearGroups.forEach(group => {
+      if (year === 'all' || group.dataset.year === year) {
+        group.style.display = '';
+        group.style.opacity = '0';
+        setTimeout(() => { group.style.opacity = '1'; group.style.transition = 'opacity 0.4s ease'; }, 30);
+      } else {
+        group.style.display = 'none';
+      }
+    });
+  });
+});
+
+// ====== Rotating "currently" text ======
+const rotator = document.getElementById('rotator');
+const phrases = [
+  'explainable AI for law',
+  'historical Scandinavian NLP',
+  'legal chatbots',
+  'computational humanities',
+  'sentiment analysis'
+];
+let phraseIdx = 0;
+let charIdx = 0;
+let isDeleting = false;
+let typingTimer;
+
+function typeLoop() {
+  if (!rotator) return;
+  if (!document.getElementById('home').classList.contains('active')) {
+    typingTimer = setTimeout(typeLoop, 200);
+    return;
+  }
+
+  const current = phrases[phraseIdx];
+
+  if (!isDeleting) {
+    charIdx++;
+    rotator.textContent = current.substring(0, charIdx);
+    if (charIdx === current.length) {
+      isDeleting = true;
+      typingTimer = setTimeout(typeLoop, 2200);
+      return;
+    }
+    typingTimer = setTimeout(typeLoop, 70);
+  } else {
+    charIdx--;
+    rotator.textContent = current.substring(0, charIdx);
+    if (charIdx === 0) {
+      isDeleting = false;
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      typingTimer = setTimeout(typeLoop, 400);
+      return;
+    }
+    typingTimer = setTimeout(typeLoop, 35);
+  }
+}
+typeLoop();
+
+// ====== Keyboard nav ======
+const navOrder = ['home', 'education', 'research', 'publications', 'teaching', 'projects', 'experience', 'contact'];
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  const current = window.location.hash.substring(1) || 'home';
+  const idx = navOrder.indexOf(current);
+  if (idx === -1) return;
+  if (e.key === 'ArrowRight' && idx < navOrder.length - 1) {
+    window.location.hash = navOrder[idx + 1];
+  } else if (e.key === 'ArrowLeft' && idx > 0) {
+    window.location.hash = navOrder[idx - 1];
+  }
+});
+</script>
+
+</body>
+</html>
